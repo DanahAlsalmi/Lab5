@@ -39,7 +39,7 @@ public class StudentController {
         students.remove(index);
         return new ApiResponse("Successfully deleted student");
     }
-
+    //name
     @GetMapping("/name/{index}")
     public ApiResponse getName(@PathVariable int index) {
         if (index >= 0 && index < students.size()) {
@@ -48,7 +48,7 @@ public class StudentController {
         return new ApiResponse("Student not found");
     }
 
-
+    //Age
     @GetMapping("/age/{index}")
     public int getAge(@PathVariable int index) {
         if (index >= 0 && index < students.size()) {
@@ -56,7 +56,7 @@ public class StudentController {
         }
         return 0;
     }
-
+    //Degree
     @GetMapping("/college/degree/{index}")
     public ApiResponse getDegree(@PathVariable int index) {
         if (index >= 0 && index < students.size()) {
@@ -64,7 +64,7 @@ public class StudentController {
         }
         return new ApiResponse("Student not found");
     }
-
+    //Status
     @GetMapping("/study/status/{index}")
     public boolean getGraduationStatus(@PathVariable int index) {
         if (index >= 0 && index < students.size()) {
